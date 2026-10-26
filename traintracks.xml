@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!-- DPS 2026-09-21: rewritten to declare ONLY our own line.
+     The previous version re-declared the 12 vanilla tracks with
+     common:/data/levels/gta5/trainsN.dat paths. FiveM cannot resolve those, the
+     whole file was rejected, and the client ended up with just the 12 stock
+     tracks - proven with /trackprobe (12..31 reported off/0 nodes). With no
+     Roxwood track in the engine, CREATE_MISSION_TRAIN put the shuttle on the
+     main line instead. TRAINTRACKS_FILE APPENDS to the vanilla list, so this
+     single entry is runtime track 12 (see amb-roxwood-trains' own config, which
+     is written the same way). -->
+<train_tracks version = "1">
+	<train_track
+		filename="resources:/dps-traintracks/trains14.dat"
+		trainConfigName="rox_passenger_config01"
+		isPingPongTrack="true"
+		stopsAtStations="true"
+		MPstopsAtStations="true"
+		speed="20.1"
+		brakingDist="10"/>
+</train_tracks>
